@@ -603,39 +603,13 @@ video {
   display: none;
 }
 
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
 .size-9 {
   width: 2.25rem;
   height: 2.25rem;
-}
-
-.size-\[30rem\] {
-  width: 30rem;
-  height: 30rem;
-}
-
-.size-\[60rem\] {
-  width: 60rem;
-  height: 60rem;
-}
-
-.size-\[rem\] {
-  width: rem;
-  height: rem;
-}
-
-.size-\[40rem\] {
-  width: 40rem;
-  height: 40rem;
-}
-
-.size-\[50rem\] {
-  width: 50rem;
-  height: 50rem;
-}
-
-.size-\[45rem\] {
-  width: 45rem;
-  height: 45rem;
 }
 
 .min-h-dvh {
@@ -652,6 +626,10 @@ video {
 
 .w-2\/3 {
   width: 66.666667%;
+}
+
+.w-2\/5 {
+  width: 40%;
 }
 
 .w-3\/4 {
@@ -760,6 +738,12 @@ video {
   margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
 
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
@@ -790,16 +774,8 @@ video {
   border-radius: 1.5rem;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
 .rounded-xl {
   border-radius: 0.75rem;
-}
-
-.rounded-full {
-  border-radius: 9999px;
 }
 
 .rounded-t-3xl {
@@ -813,10 +789,6 @@ video {
 
 .border-2 {
   border-width: 2px;
-}
-
-.border-8 {
-  border-width: 8px;
 }
 
 .border-l-8 {
@@ -867,18 +839,6 @@ video {
 
 .bg-cover {
   background-size: cover;
-}
-
-.bg-clip-border {
-  background-clip: border-box;
-}
-
-.bg-clip-padding {
-  background-clip: padding-box;
-}
-
-.bg-clip-content {
-  background-clip: content-box;
 }
 
 .bg-left-bottom {
@@ -1010,11 +970,6 @@ video {
 .\~px-5\/8 {
   padding-left: clamp(1.25rem,1.04rem + 1.07vw,2rem)/* fluid from 1.25rem at 20rem to 2rem at 90rem */;
   padding-right: clamp(1.25rem,1.04rem + 1.07vw,2rem)/* fluid from 1.25rem at 20rem to 2rem at 90rem */;
-}
-
-.\[border-image\:linear-gradient\(to_top_right\2c \#f6b73c\2c \#4d9f0c\)_30\] {
-  -o-border-image: linear-gradient(to top right,#f6b73c,#4d9f0c) 30;
-     border-image: linear-gradient(to top right,#f6b73c,#4d9f0c) 30;
 }
 
 /* Additional styles */
@@ -1207,6 +1162,54 @@ header, main, section, footer {
 }
 
 /* Inner and outer borders */
+
+.circle-border{
+  --gradient: conic-gradient(
+        from 315deg,
+        #f9faff,
+        #d7e1f9,
+        #f9faff
+      );
+  --border-width: 8px;
+  border: var(--border-width) solid transparent;
+  border-radius: 100%;
+  /*
+    For Safari >= 18.2:
+    Uses the `background` shorthad with the new `border-area` value for `background-clip`.
+    `border-box` is neccessary for `background-origin` in early implementations,
+    but an update to the spec hints that it can be dropped in the future.
+    */
+  @supports (background-clip: border-area) {
+    background: var(--gradient) border-box border-area;
+  }
+  /*
+    For Chromium, Firefox and Safari <= 18.1:
+    Uses a pseudo element with two overlapping mask images,
+    one covering the border box and the other the padding box.
+    The overlap defines the cut-out area.
+    */
+  @supports not (background-clip: border-area) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: calc(-1 * var(--border-width));
+      border: inherit;
+      border-radius: inherit;
+      background: var(--gradient) border-box;
+      -webkit-mask:
+          conic-gradient(#000 0 0) padding-box,
+          conic-gradient(#000 0 0);
+      -webkit-mask-composite:
+          xor;
+              mask:
+          conic-gradient(#000 0 0) padding-box exclude,
+          conic-gradient(#000 0 0);
+      pointer-events: none;
+    }
+  }
+}
 
 .hover\:bg-blue:hover {
   --tw-bg-opacity: 1;
