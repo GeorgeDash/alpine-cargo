@@ -91,27 +91,31 @@ header, main, section, footer{
 }
 
 /* Inner and outer borders */
-.circle-border{
+.circle-border {
     --gradient: conic-gradient(
         from 315deg,
         #f9faff,
         #d7e1f9,
         #f9faff
-      );
+    );
     --border-width: 8px;
+    --width: 45%;
+
+    width: var(--width);
+    aspect-ratio: 1 / 1; /* Ensures the element maintains a 1:1 aspect ratio */
     border: var(--border-width) solid transparent;
     border-radius: 100%;
 
     /*
     For Safari >= 18.2:
-    Uses the `background` shorthad with the new `border-area` value for `background-clip`.
-    `border-box` is neccessary for `background-origin` in early implementations,
+    Uses the `background` shorthand with the new `border-area` value for `background-clip`.
+    `border-box` is necessary for `background-origin` in early implementations,
     but an update to the spec hints that it can be dropped in the future.
     */
     @supports (background-clip: border-area) {
-      background: var(--gradient) border-box border-area;
+        background: var(--gradient) border-box border-area;
     }
-  
+
     /*
     For Chromium, Firefox and Safari <= 18.1:
     Uses a pseudo element with two overlapping mask images,
@@ -119,19 +123,19 @@ header, main, section, footer{
     The overlap defines the cut-out area.
     */
     @supports not (background-clip: border-area) {
-      position: relative;
-  
-      &::before {
-        content: "";
-        position: absolute;
-        inset: calc(-1 * var(--border-width));
-        border: inherit;
-        border-radius: inherit;
-        background: var(--gradient) border-box;
-        mask:
-          conic-gradient(#000 0 0) padding-box exclude,
-          conic-gradient(#000 0 0);
-        pointer-events: none;
-      }
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: calc(-1 * var(--border-width));
+            border: inherit;
+            border-radius: inherit;
+            background: var(--gradient) border-box;
+            mask:
+                conic-gradient(#000 0 0) padding-box exclude,
+                conic-gradient(#000 0 0);
+            pointer-events: none;
+        }
     }
-  }
+}

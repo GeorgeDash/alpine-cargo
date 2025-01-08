@@ -628,10 +628,6 @@ video {
   width: 66.666667%;
 }
 
-.w-2\/5 {
-  width: 40%;
-}
-
 .w-3\/4 {
   width: 75%;
 }
@@ -646,6 +642,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[530px\] {
+  width: 530px;
 }
 
 .flex-1 {
@@ -920,6 +920,14 @@ video {
   font-size: 3.5rem;
 }
 
+.text-\[3rem\] {
+  font-size: 3rem;
+}
+
+.text-\[4rem\] {
+  font-size: 4rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1163,20 +1171,24 @@ header, main, section, footer {
 
 /* Inner and outer borders */
 
-.circle-border{
+.circle-border {
   --gradient: conic-gradient(
         from 315deg,
         #f9faff,
         #d7e1f9,
         #f9faff
-      );
+    );
   --border-width: 8px;
+  --width: 45%;
+  width: var(--width);
+  aspect-ratio: 1 / 1;
+  /* Ensures the element maintains a 1:1 aspect ratio */
   border: var(--border-width) solid transparent;
   border-radius: 100%;
   /*
     For Safari >= 18.2:
-    Uses the `background` shorthad with the new `border-area` value for `background-clip`.
-    `border-box` is neccessary for `background-origin` in early implementations,
+    Uses the `background` shorthand with the new `border-area` value for `background-clip`.
+    `border-box` is necessary for `background-origin` in early implementations,
     but an update to the spec hints that it can be dropped in the future.
     */
   @supports (background-clip: border-area) {
@@ -1199,13 +1211,13 @@ header, main, section, footer {
       border-radius: inherit;
       background: var(--gradient) border-box;
       -webkit-mask:
-          conic-gradient(#000 0 0) padding-box,
-          conic-gradient(#000 0 0);
+                conic-gradient(#000 0 0) padding-box,
+                conic-gradient(#000 0 0);
       -webkit-mask-composite:
-          xor;
+                xor;
               mask:
-          conic-gradient(#000 0 0) padding-box exclude,
-          conic-gradient(#000 0 0);
+                conic-gradient(#000 0 0) padding-box exclude,
+                conic-gradient(#000 0 0);
       pointer-events: none;
     }
   }
