@@ -1126,6 +1126,22 @@ video {
   padding-right: clamp(1.25rem,1.04rem + 1.07vw,2rem)/* fluid from 1.25rem at 20rem to 2rem at 90rem */;
 }
 
+/* For all elements */
+
+*::-moz-selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(192 192 192 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+*::selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(192 192 192 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
 /* Additional styles */
 
 button {
