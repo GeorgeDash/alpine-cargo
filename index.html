@@ -21,29 +21,29 @@
     <body class="min-h-dvh w-full flex flex-col items-center overflow-x-hidden text-black ~px-5/8 relative">
         <header class="flex justify-between items-center z-[9999] bg-white fixed ~px-5/8 py-5">
             <a href="index.html" class="flex space-x-2 items-center">
-                <img src="/build/img/logo.png" alt="main logo image" class="size-9">
-                <p class="hidden md:block text-[1.1rem] font-bold">Alpine Cargo</p>
+                <img src="/build/img/logo.png" alt="main logo image" loading="lazy" class="size-9">
+                <p class="hidden md:block ~text-[0.8rem]/[1.1rem] font-bold">Alpine Cargo</p>
             </a>
-            <nav id="main-nav" class="flex space-x-9 items-center font-semibold child:transition-colors child:duration-375 child-hover:text-blue absolute left-1/2 -translate-x-1/2">
+            <nav id="main-nav" class="flex space-x-9 items-center ~md:~text-[0.75rem]/[1rem] font-semibold child:transition-colors child:duration-375 child-hover:text-blue md:absolute md:left-1/2 md:-translate-x-1/2">
                 <a href="#about-us">About us</a>
                 <a href="#how-it-works">How it works</a>
                 <a href="#reviews">Reviews</a>
             </nav>
-            <div id="user-actions" class="flex space-x-3 items-center font-semibold child:border-2 child:border-blue child:rounded-xl child:py-2.5 child:px-7">
+            <div id="user-actions" class="hidden md:flex space-x-3 items-center font-semibold child:~text-[0.5rem]/[1rem] child:border-2 child:border-blue child:rounded-xl child:~py-1.5/2.5 child:~px-3/7">
                 <button class="sign-up bg-white text-blue border-2 border-blue">Sign up</button>
                 <button class="get-now bg-blue text-white transition-colors duration-375 hover:bg-white hover:text-blue">Get it Now</button>
             </div>
         </header>
-        <main class="mt-28">
+        <main class="mt-28 overflow-x-clip">
             <section id="about-us" class="scroll-mt-28">
-                <div id="hero" class="flex items-start mb-11">
-                    <div class="description w-1/2 flex flex-col justify-start space-y-8">
-                        <h1 class="text-[3.5rem] font-bold leading-tight">Increase your delivery success with <span class="text-blue">Alpine Cargo</span></h1>
-                        <p class="w-2/3 text-[1.05rem] font-medium">Alpine Cargo allows you to manage your deliveries, get real-time proof of delivery, and automate your entire scheduling process from one solution for your business.</p>
+                <div id="hero" class="flex flex-col space-y-20 md:flex-row items-center md:items-start mb-11">
+                    <div class="description w-full md:w-1/2 flex flex-col justify-start items-center md:items-start space-y-8 text-center md:text-left">
+                        <h1 class="w-full md:w-fit ~text-[1.75rem]/[3.5rem] font-bold leading-tight">Increase your delivery success with <span class="text-blue">Alpine Cargo</span></h1>
+                        <p class="w-2/3 ~text-[0.85rem]/[1.05rem] font-medium">Alpine Cargo allows you to manage your deliveries, get real-time proof of delivery, and automate your entire scheduling process from one solution for your business.</p>
                         <button class="bg-blue text-white font-semibold border-2 border-blue rounded-xl transition-all duration-375 hover:bg-white hover:text-blue px-7 py-2.5">Get it Now</button>
                     </div>
-                    <div class="image flex flex-1 justify-end">
-                        <img src="/build/img/plane.png" alt="plane image" class="w-4/5 -scale-x-100">
+                    <div class="image flex flex-1 justify-center md:justify-end">
+                        <img src="/build/img/plane.png" alt="plane image" loading="lazy" class="w-4/5 -scale-x-100">
                     </div>
                 </div>
                 <div id="benefits" class="w-full grid grid-cols-3 gap-4">
@@ -71,21 +71,21 @@
                 </div>
                 <div id="delivery-app" class="w-full flex flex-col space-y-8 justify-end items-center bg-delivery bg-left-top bg-cover text-white rounded-3xl my-20 px-24 pt-16">
                     <div class="description w-full flex flex-col items-center space-y-5">
-                        <h2 class="w-3/5 text-[3.5rem] text-center font-semibold leading-tight">We offer an advanced delivery management app</h2>
-                        <p class="w-1/2 text-center">With Alpine Cargo, you can increase your delivery success rate to 100% and ensure that every package is delivered on time and to the right recipient.</p>
+                        <h2 class="w-3/5 ~text-[1.75rem]/[3.5rem] text-center font-semibold leading-tight">We offer an advanced delivery management app</h2>
+                        <p class="w-1/2 ~text-[0.8rem]/[1rem] text-center">With Alpine Cargo, you can increase your delivery success rate to 100% and ensure that every package is delivered on time and to the right recipient.</p>
                     </div>
                     <button class="bg-white text-blue font-semibold border border-white rounded-xl transition-colors duration-375 hover:bg-blue hover:text-white px-7 py-2.5">Learn more</button>
-                    <img src="/build/img/delivery.png" alt="delivery app image" class="border-black border-t-8 border-r-8 border-l-8 rounded-t-3xl">
+                    <img src="/build/img/delivery.png" alt="delivery app image" loading="lazy" class="border-black border-t-8 border-r-8 border-l-8 rounded-t-3xl">
                 </div>
-                <div id="contacting" class="w-full flex justify-between bg-delivery bg-left-bottom bg-cover text-white rounded-3xl px-12 py-5">
-                    <div class="description w-1/2 flex flex-col space-y-4">
-                        <h2 class="text-[2.5rem] font-semibold leading-tight">Suitable for companies across a range of industries: e-commerce, retail, and more</h2>
-                        <p class="w-3/4 text-[1.1rem]">Manage operations seamlessly through our intelligent software's web dashboard, record deliveries, allocate new jobs, and streamline workflows with drag-and-drop.</p>
+                <div id="contacting" class="w-full flex flex-col xl:flex-row xl:justify-between items-center xl:items-start bg-delivery bg-left-bottom bg-cover text-white rounded-3xl px-12 py-5">
+                    <div class="description w-3/4 xl:w-1/2 flex flex-col items-center xl:items-start space-y-4">
+                        <h2 class="~text-[1.5rem]/[2.5rem] text-center xl:text-left font-semibold leading-tight">Suitable for companies across a range of industries: e-commerce, retail, and more</h2>
+                        <p class="w-3/4 ~text-[0.75rem]/[1.1rem] text-center xl:text-left">Manage operations seamlessly through our intelligent software's web dashboard, record deliveries, allocate new jobs, and streamline workflows with drag-and-drop.</p>
                     </div>
                     <div id="contacts-example" class="flex flex-col justify-center items-center space-y-12">
                         <div class="contact">
                             <div class="info">
-                                <img src="/build/img/hassan.png" alt="hassan welch">
+                                <img src="/build/img/hassan.png" alt="hassan welch" loading="lazy">
                                 <div class="name">
                                     <h3>Hassan Welch</h3>
                                     <p>Courier</p>
@@ -97,12 +97,12 @@
                             </div>
                         </div>
                         <a href="index.html" class="flex space-x-2 items-center">
-                            <img src="/build/img/logo.png" alt="main logo image" class="size-9">
+                            <img src="/build/img/logo.png" alt="main logo image" loading="lazy" class="size-9">
                             <p class="hidden md:block text-[1.1rem] font-bold">Alpine Cargo</p>
                         </a>
                         <div class="contact">
                             <div class="info">
-                                <img src="/build/img/vanessa.jpg" alt="vanessa douglas">
+                                <img src="/build/img/vanessa.jpg" alt="vanessa douglas" loading="lazy">
                                 <div class="name">
                                     <h3>Vanessa Douglas</h3>
                                     <p>Client</p>
@@ -117,30 +117,30 @@
                 </div>
             </section>
             <section id="how-it-works" class="flex flex-col items-center text-center mt-20 mb-44 scroll-mt-24">
-                <h2 class="text-[3.5rem] font-bold">How <span class="text-blue">Alpine Cargo</span> works</h2>
-                <p class="w-1/3 pt-3 pb-5">Alpine Cargo answers the urgent demand for a fast and easily delivery system</p>
+                <h2 class="~text-[1.75rem]/[3.5rem] font-bold">How <span class="text-blue">Alpine Cargo</span> works</h2>
+                <p class="w-1/3 ~text-[0.85rem]/[1rem] pt-3 pb-5">Alpine Cargo answers the urgent demand for a fast and easily delivery system</p>
                 <div id="steps" class="w-full grid grid-cols-4 gap-3">
                     <div class="step">
                         <h6>[1]</h6>
-                        <img src="/build/img/how-it-works/step1.png" alt="step 1">
+                        <img src="/build/img/how-it-works/step1.png" alt="step 1" loading="lazy">
                         <h3>Import deliveries</h3>
                         <p>With our import tool, you can easily add your new deliveries and more.</p>
                     </div>
                     <div class="step">
                         <h6>[2]</h6>
-                        <img src="/build/img/how-it-works/step2.png" alt="step 2">
+                        <img src="/build/img/how-it-works/step2.png" alt="step 2" loading="lazy">
                         <h3>Allocate orders</h3>
                         <p>With all data imported, our delivery app allocates orders to the drivers.</p>
                     </div>
                     <div class="step">
                         <h6>[3]</h6>
-                        <img src="/build/img/how-it-works/step3.png" alt="step 3">
+                        <img src="/build/img/how-it-works/step3.png" alt="step 3" loading="lazy">
                         <h3>Capture e-signature</h3>
                         <p>Courier can complete the delivery by capturing the recipient's signature.</p>
                     </div>
                     <div class="step">
                         <h6>[4]</h6>
-                        <img src="/build/img/how-it-works/step4.png" alt="step 4">
+                        <img src="/build/img/how-it-works/step4.png" alt="step 4" loading="lazy">
                         <h3>Send notification</h3>
                         <p>A delivery notification with a digital doc is emailed to the customer.</p>
                     </div>
@@ -154,7 +154,7 @@
                     #f9faff
                 );">
                     <div class="comment top-10 left-40" id="adem">
-                        <img src="/build/img/reviews/adem.jpg" alt="adem">
+                        <img src="/build/img/reviews/adem.jpg" alt="adem" loading="lazy">
                         <div class="bubble top-5 right-12">
                             <div class="arrow -top-[2.9rem] left-[4.5rem]"></div>
                             <i class='bx bxs-quote-alt-left'></i>
@@ -165,7 +165,7 @@
                         </div>
                     </div>
                     <div class="comment top-40 right-40" id="zaina">
-                        <img src="/build/img/reviews/zaina.jpg" alt="zaina">
+                        <img src="/build/img/reviews/zaina.jpg" alt="zaina" loading="lazy">
                         <div class="bubble bottom-[9.5rem] left-[37.5%]">
                             <div class="arrow -rotate-90 top-[4.5rem] -left-10"></div>
                             <i class='bx bxs-quote-alt-left'></i>
@@ -176,7 +176,7 @@
                         </div>
                     </div>
                     <div class="comment top-[40%] -right-[26%]" id="mya">
-                        <img src="/build/img/reviews/mya.jpg" alt="mya">
+                        <img src="/build/img/reviews/mya.jpg" alt="mya" loading="lazy">
                         <div class="bubble top-5 right-1/2">
                             <div class="arrow -top-[2.9rem] right-[5.5rem]"></div>
                             <i class='bx bxs-quote-alt-left'></i>
@@ -187,7 +187,7 @@
                         </div>
                     </div>
                     <div class="comment bottom-[15%] left-44" id="roosevelt">
-                        <img src="/build/img/reviews/roosevelt.jpg" alt="roosevelt">
+                        <img src="/build/img/reviews/roosevelt.jpg" alt="roosevelt" loading="lazy">
                         <div class="bubble top-5 right-28">
                             <div class="arrow -top-[2.9rem] left-[8.5rem]"></div>
                             <i class='bx bxs-quote-alt-left'></i>
@@ -198,7 +198,7 @@
                         </div>
                     </div>
                     <div class="comment -bottom-56 right-40" id="saira">
-                        <img src="/build/img/reviews/saira.jpg" alt="saira">
+                        <img src="/build/img/reviews/saira.jpg" alt="saira" loading="lazy">
                         <div class="bubble bottom-[9rem] left-[37.5%]">
                             <div class="arrow -rotate-90 top-[4rem] -left-10"></div>
                             <i class='bx bxs-quote-alt-left'></i>
@@ -219,7 +219,7 @@
             <div id="first-row" class="w-full flex justify-between items-start px-14">
                 <div id="social-media" class="flex flex-col space-y-6">
                     <a href="index.html" class="flex space-x-2 items-center">
-                        <img src="/build/img/logo.png" alt="main logo image" class="size-10">
+                        <img src="/build/img/logo.png" alt="main logo image" class="size-10" loading="lazy">
                         <p class="hidden md:block text-[1.3rem] font-bold">Alpine Cargo</p>
                     </a>
                     <div id="social-media-wrapper" class="flex space-x-3 items-center">

@@ -39,7 +39,7 @@ module.exports = {
   },
   plugins: [
     fluid({
-      checkSC144: false
+      checkSC144: false,
     }),
     function ({addVariant}) {
       addVariant('child', '& > *');

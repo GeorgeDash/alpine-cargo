@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* TESTING PURPOSES ONLY */
+/* *{
+    outline: 1px solid red;
+} */
+
+
 /* For all elements */
 *::selection{
     @apply bg-[#c0c0c0] text-white;
@@ -37,7 +44,7 @@ header, main, section, footer{
 
 /* Example contact */
 .contact{
-    @apply w-full flex justify-between space-x-12 items-center bg-[#487898] rounded-2xl p-4;
+    @apply w-[420px] xl:w-full flex justify-between space-x-12 items-center bg-[#487898] rounded-2xl p-4;
 }
 
 .contact .info{
