@@ -179,3 +179,8 @@ header, main, section, footer{
 .bubble .text h6{
     @apply font-bold;
 }
+
+/* Social media icons */
+.icon{
+    @apply size-10 flex justify-center items-center bg-gray text-[#487898] text-[1.75rem] border border-gray rounded-full transition-all duration-375 hover:text-[var(--icon-color)];
+}
