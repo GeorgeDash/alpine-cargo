@@ -11,6 +11,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <!-- Font and icons -->
 
+        <!-- Always load page on top -->
+        <script src="/build/js/alwaysOnTop.js" defer></script>
+        <!-- Always load page on top -->
+
         <!-- AOS (Animate on Scroll) -->
         <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
         <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -18,13 +22,13 @@
         <link rel="stylesheet" href="build/css/style.css">
         <title>Alpine Cargo</title>
     </head>
-    <body class="min-h-dvh w-full flex flex-col items-center overflow-x-hidden text-black ~px-5/8 relative">
+    <body class="min-h-dvh w-full flex flex-col items-center overflow-x-hidden text-black ~px-2/8 relative">
         <header class="flex justify-between items-center z-[9999] bg-white fixed ~px-5/8 py-5">
             <a href="index.html" class="flex space-x-2 items-center">
                 <img src="/build/img/logo.png" alt="main logo image" loading="lazy" class="size-9">
                 <p class="hidden md:block ~text-[0.8rem]/[1.1rem] font-bold">Alpine Cargo</p>
             </a>
-            <nav id="main-nav" class="flex space-x-9 items-center ~md:~text-[0.75rem]/[1rem] font-semibold child:transition-colors child:duration-375 child-hover:text-blue md:absolute md:left-1/2 md:-translate-x-1/2">
+            <nav id="main-nav" class="flex ~sm/sm-m:~space-x-5/9 items-center ~/md:~text-[0.75rem]/[1rem] font-semibold child:transition-colors child:duration-375 child-hover:text-blue md:absolute md:left-1/2 md:-translate-x-1/2">
                 <a href="#about-us">About us</a>
                 <a href="#how-it-works">How it works</a>
                 <a href="#reviews">Reviews</a>
@@ -46,7 +50,7 @@
                         <img src="/build/img/plane.png" alt="plane image" loading="lazy" class="w-4/5 -scale-x-100">
                     </div>
                 </div>
-                <div id="benefits" class="w-full grid grid-cols-3 gap-4">
+                <div id="benefits" class="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div class="benefit">
                         <i class='bx bx-category-alt'></i>
                         <div class="benefit-desc">
@@ -69,15 +73,15 @@
                         </div>
                     </div>
                 </div>
-                <div id="delivery-app" class="w-full flex flex-col space-y-8 justify-end items-center bg-delivery bg-left-top bg-cover text-white rounded-3xl my-20 px-24 pt-16">
+                <div id="delivery-app" class="w-full flex flex-col space-y-8 justify-end items-center bg-delivery bg-left-top bg-cover text-white rounded-3xl my-20 ~/md:~px-6/24 pt-16">
                     <div class="description w-full flex flex-col items-center space-y-5">
-                        <h2 class="w-3/5 ~text-[1.75rem]/[3.5rem] text-center font-semibold leading-tight">We offer an advanced delivery management app</h2>
-                        <p class="w-1/2 ~text-[0.8rem]/[1rem] text-center">With Alpine Cargo, you can increase your delivery success rate to 100% and ensure that every package is delivered on time and to the right recipient.</p>
+                        <h2 class="w-full lg:w-3/5 ~text-[1.75rem]/[3.5rem] text-center font-semibold leading-tight">We offer an advanced delivery management app</h2>
+                        <p class="w-full md:w-1/2 ~text-[0.8rem]/[1rem] text-center">With Alpine Cargo, you can increase your delivery success rate to 100% and ensure that every package is delivered on time and to the right recipient.</p>
                     </div>
                     <button class="bg-white text-blue font-semibold border border-white rounded-xl transition-colors duration-375 hover:bg-blue hover:text-white px-7 py-2.5">Learn more</button>
                     <img src="/build/img/delivery.png" alt="delivery app image" loading="lazy" class="border-black border-t-8 border-r-8 border-l-8 rounded-t-3xl">
                 </div>
-                <div id="contacting" class="w-full flex flex-col xl:flex-row xl:justify-between items-center xl:items-start bg-delivery bg-left-bottom bg-cover text-white rounded-3xl px-12 py-5">
+                <div id="contacting" class="w-full flex flex-col space-y-10 xl:space-y-0 xl:flex-row xl:justify-between items-center xl:items-start bg-delivery bg-left-bottom bg-cover text-white rounded-3xl ~/xl:~px-6/12 py-5">
                     <div class="description w-3/4 xl:w-1/2 flex flex-col items-center xl:items-start space-y-4">
                         <h2 class="~text-[1.5rem]/[2.5rem] text-center xl:text-left font-semibold leading-tight">Suitable for companies across a range of industries: e-commerce, retail, and more</h2>
                         <p class="w-3/4 ~text-[0.75rem]/[1.1rem] text-center xl:text-left">Manage operations seamlessly through our intelligent software's web dashboard, record deliveries, allocate new jobs, and streamline workflows with drag-and-drop.</p>
@@ -118,36 +122,44 @@
             </section>
             <section id="how-it-works" class="flex flex-col items-center text-center mt-20 mb-44 scroll-mt-24">
                 <h2 class="~text-[1.75rem]/[3.5rem] font-bold">How <span class="text-blue">Alpine Cargo</span> works</h2>
-                <p class="w-1/3 ~text-[0.85rem]/[1rem] pt-3 pb-5">Alpine Cargo answers the urgent demand for a fast and easily delivery system</p>
-                <div id="steps" class="w-full grid grid-cols-4 gap-3">
+                <p class="w-full md:w-1/3 ~text-[0.85rem]/[1rem] pt-3 pb-5">Alpine Cargo answers the urgent demand for a fast and easily delivery system.</p>
+                <div id="steps" class="w-full grid grid-cols-1 md:grid-cols-4 gap-3">
                     <div class="step">
                         <h6>[1]</h6>
                         <img src="/build/img/how-it-works/step1.png" alt="step 1" loading="lazy">
-                        <h3>Import deliveries</h3>
-                        <p>With our import tool, you can easily add your new deliveries and more.</p>
+                        <div class="step-desc">
+                            <h3>Import deliveries</h3>
+                            <p>With our import tool, you can easily add your new deliveries and more.</p>
+                        </div>
                     </div>
                     <div class="step">
                         <h6>[2]</h6>
                         <img src="/build/img/how-it-works/step2.png" alt="step 2" loading="lazy">
-                        <h3>Allocate orders</h3>
-                        <p>With all data imported, our delivery app allocates orders to the drivers.</p>
+                        <div class="step-desc">
+                            <h3>Allocate orders</h3>
+                            <p>With all data imported, our delivery app allocates orders to the drivers.</p>
+                        </div>
                     </div>
                     <div class="step">
                         <h6>[3]</h6>
                         <img src="/build/img/how-it-works/step3.png" alt="step 3" loading="lazy">
-                        <h3>Capture e-signature</h3>
-                        <p>Courier can complete the delivery by capturing the recipient's signature.</p>
+                        <div class="step-desc">
+                            <h3>Capture e-signature</h3>
+                            <p>Courier can complete the delivery by capturing the recipient's signature.</p>
+                        </div>
                     </div>
                     <div class="step">
                         <h6>[4]</h6>
                         <img src="/build/img/how-it-works/step4.png" alt="step 4" loading="lazy">
-                        <h3>Send notification</h3>
-                        <p>A delivery notification with a digital doc is emailed to the customer.</p>
+                        <div class="step-desc">
+                            <h3>Send notification</h3>
+                            <p>A delivery notification with a digital doc is emailed to the customer.</p>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section id="reviews" class="border-inner border-outer flex justify-center items-center text-center mb-40 px-16 scroll-mt-28 relative">
-                <div id="comments" class="heading circle-border flex flex-col space-y-3 justify-center items-center" style="--width: 80%; --gradient: conic-gradient(
+            <section id="reviews" class="border-inner border-outer flex justify-center items-center text-center mb-40 3xl:px-16 scroll-mt-28 relative">
+                <div id="comments-desktop" class="heading circle-border hidden 3xl:flex flex-col space-y-3 justify-center items-center" style="--width: 80%; --gradient: conic-gradient(
                     from 135deg,
                     #f9faff,
                     #d7e1f9,
@@ -213,34 +225,40 @@
                         <p class="w-3/5">We have over 3,000 satisfied customers worldwide, and they are happy to give feedback on our work.</p>
                     </div>
                 </div>
+                <div id="comments-mobile" class="w-full flex 3xl:hidden flex-col justify-center items-center">
+                    <div class="heading w-full flex flex-col space-y-3 items-center">
+                        <h2 class="w-[530px] text-[3.5rem] font-bold leading-tight">What <span class="text-blue">our clients</span> say <span class="text-blue">about us</span></h2>
+                        <p class="w-1/3">We have over 3,000 satisfied customers worldwide, and they are happy togive feedback on our work.</p>
+                    </div>
+                </div>
             </section>
         </main>
-        <footer class="flex flex-col space-y-20 items-center bg-[#487898] text-white rounded-t-[3rem] px-28 pt-8 pb-5">
-            <div id="first-row" class="w-full flex justify-between items-start px-14">
-                <div id="social-media" class="flex flex-col space-y-6">
+        <footer class="flex flex-col space-y-20 items-center bg-[#487898] text-white rounded-t-[3rem] ~lg:~px-14/28 pt-8 pb-5">
+            <div id="first-row" class="w-full flex flex-col md:flex-row space-y-10 md:space-y-0 justify-between items-center md:items-start">
+                <div id="social-media" class="flex flex-col space-y-3 md:space-y-6 items-center md:items-start">
                     <a href="index.html" class="flex space-x-2 items-center">
                         <img src="/build/img/logo.png" alt="main logo image" class="size-10" loading="lazy">
-                        <p class="hidden md:block text-[1.3rem] font-bold">Alpine Cargo</p>
+                        <p class="~text-[1rem]/[1.3rem] font-bold">Alpine Cargo</p>
                     </a>
                     <div id="social-media-wrapper" class="flex space-x-3 items-center">
-                        <a href="#" id="twitter" class="icon" style="--icon-color: #1da1f2;">
+                        <a href="https://twitter.com/ronasit" target="_blank" id="twitter" class="icon" style="--icon-color: #1da1f2;">
                             <i class='bx bxl-twitter'></i>
                         </a>
-                        <a href="#" id="facebook" class="icon" style="--icon-color: #1877f2;">
+                        <a href="https://facebook.com/RonasITSoftware" target="_blank" id="facebook" class="icon" style="--icon-color: #1877f2;">
                             <i class='bx bxl-facebook'></i>
                         </a>
-                        <a href="#" id="instagram" class="icon" style="--icon-color: #833ab4;">
+                        <a href="https://instagram.com/ronas_it" target="_blank" id="instagram" class="icon" style="--icon-color: #833ab4;">
                             <i class='bx bxl-instagram'></i>
                         </a>
-                        <a href="#" id="dribbble" class="icon" style="--icon-color: #ea4c89;">
+                        <a href="https://dribbble.com/ronasit" target="_blank" id="dribbble" class="icon" style="--icon-color: #ea4c89;">
                             <i class='bx bxl-dribbble'></i>
                         </a>
-                        <a href="#" id="behance" class="icon" style="--icon-color: #053eff;">
+                        <a href="https://www.behance.net/ronas_it" target="_blank"   id="behance" class="icon" style="--icon-color: #053eff;">
                             <i class='bx bxl-behance'></i>
                         </a>
                     </div>
                 </div>
-                <div class="w-1/3 flex flex-col space-y-3">
+                <div class="w-full md:w-1/3 flex flex-col space-y-3 items-center md:items-start text-center md:text-left">
                     <p>Try all-in-one delivery management solution with electronic confirmation and paperless notes.</p>
                     <button class="bg-white text-[#487898] font-semibold border border-white rounded-xl transition-colors duration-375 hover:bg-[#487898] hover:text-white px-7 py-2.5">Get it Now</button>
                 </div>

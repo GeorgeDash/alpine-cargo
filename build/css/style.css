@@ -713,10 +713,6 @@ video {
   min-height: 100dvh;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
 .w-1\/3 {
   width: 33.333333%;
 }
@@ -754,6 +750,18 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.scale-150 {
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-125 {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .-scale-x-100 {
   --tw-scale-x: -1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -767,20 +775,12 @@ video {
   scroll-margin-top: 7rem;
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-col {
   flex-direction: column;
-}
-
-.items-start {
-  align-items: flex-start;
 }
 
 .items-center {
@@ -829,6 +829,12 @@ video {
   margin-left: calc(2.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+
 .space-y-12 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
@@ -857,12 +863,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
-}
-
-.space-y-6 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
 .space-y-8 > :not([hidden]) ~ :not([hidden]) {
@@ -972,24 +972,9 @@ video {
   padding-right: 3rem;
 }
 
-.px-14 {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-}
-
-.px-16 {
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-
 .px-24 {
   padding-left: 6rem;
   padding-right: 6rem;
-}
-
-.px-28 {
-  padding-left: 7rem;
-  padding-right: 7rem;
 }
 
 .px-7 {
@@ -1038,10 +1023,6 @@ video {
 
 .text-\[1\.1rem\] {
   font-size: 1.1rem;
-}
-
-.text-\[1\.3rem\] {
-  font-size: 1.3rem;
 }
 
 .text-\[1rem\] {
@@ -1130,6 +1111,18 @@ video {
 
 .\~text-\[1\.75rem\]\/\[3\.5rem\] {
   font-size: clamp(1.75rem,1.25rem + 2.5vw,3.5rem)/* fluid type from 1.75rem at 20rem to 3.5rem at 90rem */;
+}
+
+.\~text-\[1rem\]\/\[1\.3rem\] {
+  font-size: clamp(1rem,0.91rem + 0.43vw,1.3rem)/* fluid type from 1rem at 20rem to 1.3rem at 90rem */;
+}
+
+.\~space-x-9 /* error - Missing end value */ {
+}
+
+.\~px-2\/8 {
+  padding-left: clamp(0.5rem,0.07rem + 2.14vw,2rem)/* fluid from 0.5rem at 20rem to 2rem at 90rem */;
+  padding-right: clamp(0.5rem,0.07rem + 2.14vw,2rem)/* fluid from 0.5rem at 20rem to 2rem at 90rem */;
 }
 
 .\~px-5\/8 {
@@ -1290,8 +1283,10 @@ header, main, section, footer {
 /* How it works */
 
 .step {
+  display: flex;
   width: 100%;
   cursor: pointer;
+  flex-direction: row;
   border-radius: 0.75rem;
   border-width: 2px;
   --tw-border-opacity: 1;
@@ -1311,6 +1306,12 @@ header, main, section, footer {
   background-color: rgb(242 244 250 / var(--tw-bg-opacity, 1));
 }
 
+@media (min-width: 48rem) {
+  .step {
+    flex-direction: column;
+  }
+}
+
 .step h6 {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1322,7 +1323,7 @@ header, main, section, footer {
 }
 
 .step img {
-  width: 100%;
+  width: 25%;
   --tw-scale-x: .9;
   --tw-scale-y: .9;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1331,26 +1332,37 @@ header, main, section, footer {
   transition-duration: 375ms;
 }
 
+@media (min-width: 48rem) {
+  .step img {
+    width: 100%;
+  }
+}
+
 .step:hover > img {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.step h3 {
+.step-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-desc h3 {
   width: 100%;
   font-size: 1.2rem;
   font-weight: 700;
 }
 
-.step p {
+.step-desc p {
   font-size: 0.9rem;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 375ms;
 }
 
-.step:hover > p {
+.step:hover > .step-desc p {
   font-weight: 500;
 }
 
@@ -1473,8 +1485,6 @@ header, main, section, footer {
 
 .icon {
   display: flex;
-  width: 2.5rem;
-  height: 2.5rem;
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
@@ -1483,7 +1493,6 @@ header, main, section, footer {
   border-color: rgb(242 244 250 / var(--tw-border-opacity, 1));
   --tw-bg-opacity: 1;
   background-color: rgb(242 244 250 / var(--tw-bg-opacity, 1));
-  font-size: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(72 120 152 / var(--tw-text-opacity, 1));
   transition-property: all;
@@ -1493,6 +1502,12 @@ header, main, section, footer {
 
 .icon:hover {
   color: var(--icon-color);
+}
+
+.icon {
+  font-size: clamp(1.25rem,0.14rem + 1.79vw,1.75rem)/* fluid type from 1.25rem at 62rem to 1.75rem at 90rem */;
+  width: clamp(2rem,0.89rem + 1.79vw,2.5rem)/* fluid from 2rem at 62rem to 2.5rem at 90rem */;
+  height: clamp(2rem,0.89rem + 1.79vw,2.5rem)/* fluid from 2rem at 62rem to 2.5rem at 90rem */;
 }
 
 .hover\:bg-\[\#487898\]:hover {
@@ -1520,8 +1535,95 @@ header, main, section, footer {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.\~sm\/md\:\~text-\[0\.85rem\]\/\[1rem\] {
+  font-size: clamp(0.85rem,0.74rem + 0.54vw,1rem)/* fluid type from 0.85rem at 20rem to 1rem at 48rem */;
+}
+
+.\~sm\/md\:\~text-\[0\.85rem\] {
+  /*
+error - Fluid variants can only be used with fluid utilities
+*/
+}
+
+.\~sm\/md\:\~text-\[0\.75rem\]\/\[0\.85rem\] {
+  font-size: clamp(0.75rem,0.68rem + 0.36vw,0.85rem)/* fluid type from 0.75rem at 20rem to 0.85rem at 48rem */;
+}
+
+.\~sm\/md\:\~text-\[\]\/\[0\.85rem\] {
+  /*
+error - Missing start value
+*/
+}
+
+.\~sm\/md\:\~text-\[0\.\]\/\[0\.85rem\] {
+  color: clamp(0rem,-0.61rem + 3.04vw,0.85rem)/* fluid from 0rem at 20rem to 0.85rem at 48rem */;
+}
+
+.\~sm\/sm-m\:\~space-x-9 {
+  /*
+error - Missing end value
+*/
+}
+
+.\~sm\/sm-m\:\~space-x-5\/9 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(clamp(1.25rem,-4.5682rem + 29.0909vw,2.25rem)/* fluid from 1.25rem at 20rem to 2.25rem at 23.4375rem */ * var(--tw-space-x-reverse));
+  margin-left: calc(clamp(1.25rem,-4.5682rem + 29.0909vw,2.25rem)/* fluid from 1.25rem at 20rem to 2.25rem at 23.4375rem */ * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .\~md\:\~text-\[0\.75rem\]\/\[1rem\] {
   font-size: clamp(0.75rem,0.46rem + 0.6vw,1rem)/* fluid type from 0.75rem at 48rem to 1rem at 90rem */;
+}
+
+.\~md\:\~text-\[0\.85rem\]\/\[1rem\] {
+  font-size: clamp(0.85rem,0.68rem + 0.36vw,1rem)/* fluid type from 0.85rem at 48rem to 1rem at 90rem */;
+}
+
+.\~md\:\~text-\[0\.85rem\] {
+  /*
+error - Fluid variants can only be used with fluid utilities
+*/
+}
+
+.\~\/md\:px-24 {
+  /*
+error - Fluid variants can only be used with fluid utilities
+*/
+}
+
+.\~\/md\:\~text-\[0\.85rem\]\/\[1rem\] {
+  font-size: clamp(0.85rem,0.74rem + 0.54vw,1rem)/* fluid type from 0.85rem at 20rem to 1rem at 48rem */;
+}
+
+.\~\/md\:\~text-\[0\.75rem\]\/\[1rem\] {
+  font-size: clamp(0.75rem,0.57rem + 0.89vw,1rem)/* fluid type from 0.75rem at 20rem to 1rem at 48rem */;
+}
+
+.\~\/md\:\~px-6\/24 {
+  padding-left: clamp(1.5rem,-1.71rem + 16.07vw,6rem)/* fluid from 1.5rem at 20rem to 6rem at 48rem */;
+  padding-right: clamp(1.5rem,-1.71rem + 16.07vw,6rem)/* fluid from 1.5rem at 20rem to 6rem at 48rem */;
+}
+
+.\~lg\:\~px-14\/28 {
+  padding-left: clamp(3.5rem,-4.25rem + 12.5vw,7rem)/* fluid from 3.5rem at 62rem to 7rem at 90rem */;
+  padding-right: clamp(3.5rem,-4.25rem + 12.5vw,7rem)/* fluid from 3.5rem at 62rem to 7rem at 90rem */;
+}
+
+.\~\/xl\:px-12 {
+  /*
+error - Fluid variants can only be used with fluid utilities
+*/
+}
+
+.\~\/xl\:\~px-12 {
+  /*
+error - Missing end value
+*/
+}
+
+.\~\/xl\:\~px-6\/12 {
+  padding-left: clamp(1.5rem,0.82rem + 3.41vw,3rem)/* fluid from 1.5rem at 20rem to 3rem at 64rem */;
+  padding-right: clamp(1.5rem,0.82rem + 3.41vw,3rem)/* fluid from 1.5rem at 20rem to 3rem at 64rem */;
 }
 
 .child\:rounded-xl > * {
@@ -1590,6 +1692,10 @@ header, main, section, footer {
     width: 50%;
   }
 
+  .md\:w-1\/3 {
+    width: 33.333333%;
+  }
+
   .md\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
@@ -1598,6 +1704,14 @@ header, main, section, footer {
   .md\:-translate-x-1\/2 {
     --tw-translate-x: -50%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -1612,8 +1726,26 @@ header, main, section, footer {
     justify-content: flex-end;
   }
 
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .md\:space-y-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+  }
+
   .md\:text-left {
     text-align: left;
+  }
+}
+
+@media (min-width: 62rem) {
+  .lg\:w-3\/5 {
+    width: 60%;
   }
 }
 
@@ -1634,7 +1766,28 @@ header, main, section, footer {
     justify-content: space-between;
   }
 
+  .xl\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
   .xl\:text-left {
     text-align: left;
+  }
+}
+
+@media (min-width: 90rem) {
+  .\33xl\:flex {
+    display: flex;
+  }
+
+  .\33xl\:hidden {
+    display: none;
+  }
+
+  .\33xl\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }

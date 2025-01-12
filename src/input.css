@@ -73,7 +73,7 @@ header, main, section, footer{
 
 /* How it works */
 .step{
-    @apply w-full text-left border-2 border-gray rounded-xl transition-all duration-375 hover:bg-gray cursor-pointer pl-3 pr-5 pt-4 pb-3;
+    @apply w-full flex flex-row md:flex-col text-left border-2 border-gray rounded-xl transition-all duration-375 hover:bg-gray cursor-pointer pl-3 pr-5 pt-4 pb-3;
 }
 
 .step h6{
@@ -85,22 +85,26 @@ header, main, section, footer{
 }
 
 .step img{
-    @apply w-full scale-90 transition-all duration-375;
+    @apply w-1/4 md:w-full scale-90 transition-all duration-375;
 }
 
 .step:hover > img{
     @apply scale-105;
 }
 
-.step h3{
+.step-desc{
+    @apply flex flex-col;
+}
+
+.step-desc h3{
     @apply w-full text-[1.2rem] font-bold; 
 }
 
-.step p{
+.step-desc p{
     @apply text-[0.9rem] transition-all duration-375; 
 }
 
-.step:hover > p{
+.step:hover > .step-desc p{
     @apply font-medium;
 }
 
@@ -196,5 +200,5 @@ header, main, section, footer{
 
 /* Social media icons */
 .icon{
-    @apply size-10 flex justify-center items-center bg-gray text-[#487898] text-[1.75rem] border border-gray rounded-full transition-all duration-375 hover:text-[var(--icon-color)];
+    @apply ~lg:~size-8/10 flex justify-center items-center bg-gray text-[#487898] ~lg:~text-[1.25rem]/[1.75rem] border border-gray rounded-full transition-all duration-375 hover:text-[var(--icon-color)];
 }
