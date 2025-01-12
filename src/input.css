@@ -44,7 +44,7 @@ header, main, section, footer{
 
 /* Example contact */
 .contact{
-    @apply w-[420px] xl:w-full flex justify-between space-x-12 items-center bg-[#487898] rounded-2xl p-4;
+    @apply w-fit xl:w-full flex justify-between space-x-12 items-center bg-[#487898] rounded-2xl p-4;
 }
 
 .contact .info{
@@ -52,15 +52,15 @@ header, main, section, footer{
 }
 
 .contact .info h3{
-    @apply text-[1.2rem] font-bold; 
+    @apply ~/md:~text-[0.9rem]/[1.2rem] font-bold leading-tight; 
 }
 
 .contact .info p{
-    @apply text-[0.9rem]; 
+    @apply ~/md:~text-[0.6rem]/[0.9rem]; 
 }
 
 .contact .info img{
-    @apply size-20 rounded-2xl;
+    @apply ~/md:~size-10/20 rounded-2xl;
 }
 
 .contact .contact-actions{
@@ -68,12 +68,12 @@ header, main, section, footer{
 }
 
 .contact .contact-actions i{
-    @apply size-auto text-[1.75rem] border border-gray rounded-xl p-2;
+    @apply size-auto ~/md:~text-[1.25rem]/[1.75rem] border border-gray rounded-xl p-2;
 }
 
 /* How it works */
 .step{
-    @apply w-full flex flex-row md:flex-col text-left border-2 border-gray rounded-xl transition-all duration-375 hover:bg-gray cursor-pointer pl-3 pr-5 pt-4 pb-3;
+    @apply w-full flex flex-row md:flex-col space-x-2 md:space-x-0 text-left border-2 border-gray rounded-xl transition-all duration-375 hover:bg-gray cursor-pointer pl-3 pr-5 pt-4 pb-3;
 }
 
 .step h6{
@@ -85,7 +85,7 @@ header, main, section, footer{
 }
 
 .step img{
-    @apply w-1/4 md:w-full scale-90 transition-all duration-375;
+    @apply w-1/4 md:w-full object-contain scale-90 transition-all duration-375;
 }
 
 .step:hover > img{

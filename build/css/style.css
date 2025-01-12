@@ -721,10 +721,6 @@ video {
   width: 66.666667%;
 }
 
-.w-3\/4 {
-  width: 75%;
-}
-
 .w-3\/5 {
   width: 60%;
 }
@@ -747,18 +743,6 @@ video {
 
 .-rotate-90 {
   --tw-rotate: -90deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-150 {
-  --tw-scale-x: 1.5;
-  --tw-scale-y: 1.5;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-125 {
-  --tw-scale-x: 1.25;
-  --tw-scale-y: 1.25;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -821,12 +805,6 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.space-x-9 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(2.25rem * var(--tw-space-x-reverse));
-  margin-left: calc(2.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-10 > :not([hidden]) ~ :not([hidden]) {
@@ -909,16 +887,12 @@ video {
   border-width: 2px;
 }
 
-.border-l-8 {
-  border-left-width: 8px;
+.border-4 {
+  border-width: 4px;
 }
 
-.border-r-8 {
-  border-right-width: 8px;
-}
-
-.border-t-8 {
-  border-top-width: 8px;
+.\!border-b-0 {
+  border-bottom-width: 0px !important;
 }
 
 .border-black {
@@ -965,16 +939,6 @@ video {
 
 .bg-left-top {
   background-position: left top;
-}
-
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-.px-24 {
-  padding-left: 6rem;
-  padding-right: 6rem;
 }
 
 .px-7 {
@@ -1117,9 +1081,6 @@ video {
   font-size: clamp(1rem,0.91rem + 0.43vw,1.3rem)/* fluid type from 1rem at 20rem to 1.3rem at 90rem */;
 }
 
-.\~space-x-9 /* error - Missing end value */ {
-}
-
 .\~px-2\/8 {
   padding-left: clamp(0.5rem,0.07rem + 2.14vw,2rem)/* fluid from 0.5rem at 20rem to 2rem at 90rem */;
   padding-right: clamp(0.5rem,0.07rem + 2.14vw,2rem)/* fluid from 0.5rem at 20rem to 2rem at 90rem */;
@@ -1210,7 +1171,8 @@ header, main, section, footer {
 
 .contact {
   display: flex;
-  width: 420px;
+  width: -moz-fit-content;
+  width: fit-content;
   align-items: center;
   justify-content: space-between;
 }
@@ -1245,18 +1207,19 @@ header, main, section, footer {
 }
 
 .contact .info h3 {
-  font-size: 1.2rem;
   font-weight: 700;
+  line-height: 1.25;
+  font-size: clamp(0.9rem,0.69rem + 1.07vw,1.2rem)/* fluid type from 0.9rem at 20rem to 1.2rem at 48rem */;
 }
 
 .contact .info p {
-  font-size: 0.9rem;
+  font-size: clamp(0.6rem,0.39rem + 1.07vw,0.9rem)/* fluid type from 0.6rem at 20rem to 0.9rem at 48rem */;
 }
 
 .contact .info img {
-  width: 5rem;
-  height: 5rem;
   border-radius: 1rem;
+  width: clamp(2.5rem,0.71rem + 8.93vw,5rem)/* fluid from 2.5rem at 20rem to 5rem at 48rem */;
+  height: clamp(2.5rem,0.71rem + 8.93vw,5rem)/* fluid from 2.5rem at 20rem to 5rem at 48rem */;
 }
 
 .contact .contact-actions {
@@ -1277,7 +1240,7 @@ header, main, section, footer {
   --tw-border-opacity: 1;
   border-color: rgb(242 244 250 / var(--tw-border-opacity, 1));
   padding: 0.5rem;
-  font-size: 1.75rem;
+  font-size: clamp(1.25rem,0.89rem + 1.79vw,1.75rem)/* fluid type from 1.25rem at 20rem to 1.75rem at 48rem */;
 }
 
 /* How it works */
@@ -1287,6 +1250,15 @@ header, main, section, footer {
   width: 100%;
   cursor: pointer;
   flex-direction: row;
+}
+
+.step > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.step {
   border-radius: 0.75rem;
   border-width: 2px;
   --tw-border-opacity: 1;
@@ -1310,6 +1282,12 @@ header, main, section, footer {
   .step {
     flex-direction: column;
   }
+
+  .step > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0px * var(--tw-space-x-reverse));
+    margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+  }
 }
 
 .step h6 {
@@ -1327,6 +1305,8 @@ header, main, section, footer {
   --tw-scale-x: .9;
   --tw-scale-y: .9;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  -o-object-fit: contain;
+     object-fit: contain;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 375ms;
@@ -1535,64 +1515,10 @@ header, main, section, footer {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.\~sm\/md\:\~text-\[0\.85rem\]\/\[1rem\] {
-  font-size: clamp(0.85rem,0.74rem + 0.54vw,1rem)/* fluid type from 0.85rem at 20rem to 1rem at 48rem */;
-}
-
-.\~sm\/md\:\~text-\[0\.85rem\] {
-  /*
-error - Fluid variants can only be used with fluid utilities
-*/
-}
-
-.\~sm\/md\:\~text-\[0\.75rem\]\/\[0\.85rem\] {
-  font-size: clamp(0.75rem,0.68rem + 0.36vw,0.85rem)/* fluid type from 0.75rem at 20rem to 0.85rem at 48rem */;
-}
-
-.\~sm\/md\:\~text-\[\]\/\[0\.85rem\] {
-  /*
-error - Missing start value
-*/
-}
-
-.\~sm\/md\:\~text-\[0\.\]\/\[0\.85rem\] {
-  color: clamp(0rem,-0.61rem + 3.04vw,0.85rem)/* fluid from 0rem at 20rem to 0.85rem at 48rem */;
-}
-
-.\~sm\/sm-m\:\~space-x-9 {
-  /*
-error - Missing end value
-*/
-}
-
 .\~sm\/sm-m\:\~space-x-5\/9 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(clamp(1.25rem,-4.5682rem + 29.0909vw,2.25rem)/* fluid from 1.25rem at 20rem to 2.25rem at 23.4375rem */ * var(--tw-space-x-reverse));
   margin-left: calc(clamp(1.25rem,-4.5682rem + 29.0909vw,2.25rem)/* fluid from 1.25rem at 20rem to 2.25rem at 23.4375rem */ * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.\~md\:\~text-\[0\.75rem\]\/\[1rem\] {
-  font-size: clamp(0.75rem,0.46rem + 0.6vw,1rem)/* fluid type from 0.75rem at 48rem to 1rem at 90rem */;
-}
-
-.\~md\:\~text-\[0\.85rem\]\/\[1rem\] {
-  font-size: clamp(0.85rem,0.68rem + 0.36vw,1rem)/* fluid type from 0.85rem at 48rem to 1rem at 90rem */;
-}
-
-.\~md\:\~text-\[0\.85rem\] {
-  /*
-error - Fluid variants can only be used with fluid utilities
-*/
-}
-
-.\~\/md\:px-24 {
-  /*
-error - Fluid variants can only be used with fluid utilities
-*/
-}
-
-.\~\/md\:\~text-\[0\.85rem\]\/\[1rem\] {
-  font-size: clamp(0.85rem,0.74rem + 0.54vw,1rem)/* fluid type from 0.85rem at 20rem to 1rem at 48rem */;
 }
 
 .\~\/md\:\~text-\[0\.75rem\]\/\[1rem\] {
@@ -1607,18 +1533,6 @@ error - Fluid variants can only be used with fluid utilities
 .\~lg\:\~px-14\/28 {
   padding-left: clamp(3.5rem,-4.25rem + 12.5vw,7rem)/* fluid from 3.5rem at 62rem to 7rem at 90rem */;
   padding-right: clamp(3.5rem,-4.25rem + 12.5vw,7rem)/* fluid from 3.5rem at 62rem to 7rem at 90rem */;
-}
-
-.\~\/xl\:px-12 {
-  /*
-error - Fluid variants can only be used with fluid utilities
-*/
-}
-
-.\~\/xl\:\~px-12 {
-  /*
-error - Missing end value
-*/
 }
 
 .\~\/xl\:\~px-6\/12 {
@@ -1696,6 +1610,10 @@ error - Missing end value
     width: 33.333333%;
   }
 
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+
   .md\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
@@ -1736,6 +1654,10 @@ error - Missing end value
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+  }
+
+  .md\:border-8 {
+    border-width: 8px;
   }
 
   .md\:text-left {
