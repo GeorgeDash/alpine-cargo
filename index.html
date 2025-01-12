@@ -23,7 +23,7 @@
         <link rel="shortcut icon" href="/build/favicon.ico" type="image/x-icon">
         <title>Alpine Cargo</title>
     </head>
-    <body class="min-h-dvh w-full flex flex-col items-center overflow-x-hidden text-black ~px-2/8 relative">
+    <body class="min-h-dvh w-full flex flex-col items-center overflow-x-hidden text-black ~px-1/8 relative">
         <header class="flex justify-between items-center z-[9999] bg-white fixed ~px-5/8 py-5">
             <a href="index.html" class="flex space-x-2 items-center">
                 <img src="/build/img/logo.png" alt="main logo image" loading="lazy" class="size-9">
@@ -34,12 +34,12 @@
                 <a href="#how-it-works">How it works</a>
                 <a href="#reviews">Reviews</a>
             </nav>
-            <div id="user-actions" class="hidden md:flex space-x-3 items-center font-semibold child:~text-[0.5rem]/[1rem] child:border-2 child:border-blue child:rounded-xl child:~py-1.5/2.5 child:~px-3/7">
+            <div id="user-actions" class="hidden md:flex space-x-3 items-center font-semibold child:~text-[0.6rem]/[1rem] child:border-2 child:border-blue child:rounded-xl child:~py-1.5/2.5 child:~px-1/7">
                 <button class="sign-up bg-white text-blue border-2 border-blue">Sign up</button>
                 <button class="get-now bg-blue text-white transition-colors duration-375 hover:bg-white hover:text-blue">Get it Now</button>
             </div>
         </header>
-        <main class="mt-28 overflow-x-clip">
+        <main class="mt-28 3xl:overflow-x-clip">
             <section id="about-us" class="scroll-mt-28">
                 <div id="hero" class="flex flex-col space-y-20 md:flex-row items-center md:items-start mb-11">
                     <div class="description w-full md:w-1/2 flex flex-col justify-start items-center md:items-start space-y-8 text-center md:text-left">
@@ -122,9 +122,9 @@
                 </div>
             </section>
             <section id="how-it-works" class="flex flex-col items-center text-center mt-20 mb-44 scroll-mt-24">
-                <h2 class="~text-[1.75rem]/[3.5rem] font-bold">How <span class="text-blue">Alpine Cargo</span> works</h2>
-                <p class="w-full md:w-1/3 ~text-[0.85rem]/[1rem] pt-3 pb-5">Alpine Cargo answers the urgent demand for a fast and easily delivery system.</p>
-                <div id="steps" class="w-full grid grid-cols-1 md:grid-cols-4 gap-3">
+                <h2 class="~text-[2rem]/[3.5rem] font-bold leading-tight">How <span class="text-blue">Alpine Cargo</span> works</h2>
+                <p class="w-full md:w-1/3 ~text-[0.75rem]/[1rem] pt-3 pb-5">Alpine Cargo answers the urgent demand for a fast and easily delivery system.</p>
+                <div id="steps" class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:grid-rows-2 lg:grid-rows-none gap-3">
                     <div class="step">
                         <h6>[1]</h6>
                         <img src="/build/img/how-it-works/step1.png" alt="step 1" loading="lazy">
@@ -159,82 +159,47 @@
                     </div>
                 </div>
             </section>
-            <section id="reviews" class="border-inner border-outer flex justify-center items-center text-center mb-40 3xl:px-16 scroll-mt-28 relative">
-                <div id="comments-desktop" class="heading circle-border hidden 3xl:flex flex-col space-y-3 justify-center items-center" style="--width: 80%; --gradient: conic-gradient(
-                    from 135deg,
-                    #f9faff,
-                    #d7e1f9,
-                    #f9faff
-                );">
-                    <div class="comment top-10 left-40" id="adem">
-                        <img src="/build/img/reviews/adem.jpg" alt="adem" loading="lazy">
-                        <div class="bubble top-5 right-12">
-                            <div class="arrow -top-[2.9rem] left-[4.5rem]"></div>
-                            <i class='bx bxs-quote-alt-left'></i>
-                            <div class="text">
-                                <p>I love that with Alpine Cargo there is a way to make it very easy — go for it and create our routes.</p>
-                                <h6>Adem Barnes</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment top-40 right-40" id="zaina">
-                        <img src="/build/img/reviews/zaina.jpg" alt="zaina" loading="lazy">
-                        <div class="bubble bottom-[9.5rem] left-[37.5%]">
-                            <div class="arrow -rotate-90 top-[4.5rem] -left-10"></div>
-                            <i class='bx bxs-quote-alt-left'></i>
-                            <div class="text">
-                                <p>Alpine Cargo is an easy-flowing system that's not difficult for drivers.</p>
-                                <h6>Zaina Riddle</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment top-[40%] -right-[26%]" id="mya">
-                        <img src="/build/img/reviews/mya.jpg" alt="mya" loading="lazy">
-                        <div class="bubble top-5 right-1/2">
-                            <div class="arrow -top-[2.9rem] right-[5.5rem]"></div>
-                            <i class='bx bxs-quote-alt-left'></i>
-                            <div class="text">
-                                <p>No one struggled with Track-POD for more than a few days — it's really easy to use for everyone.</p>
-                                <h6>Mya Guzman</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment bottom-[15%] left-44" id="roosevelt">
-                        <img src="/build/img/reviews/roosevelt.jpg" alt="roosevelt" loading="lazy">
-                        <div class="bubble top-5 right-28">
-                            <div class="arrow -top-[2.9rem] left-[8.5rem]"></div>
-                            <i class='bx bxs-quote-alt-left'></i>
-                            <div class="text">
-                                <p>The Cargo app is easy to use — drivers quickly become consistent and fast!</p>
-                                <h6>Roosevelt Chase</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment -bottom-56 right-40" id="saira">
-                        <img src="/build/img/reviews/saira.jpg" alt="saira" loading="lazy">
-                        <div class="bubble bottom-[9rem] left-[37.5%]">
-                            <div class="arrow -rotate-90 top-[4rem] -left-10"></div>
-                            <i class='bx bxs-quote-alt-left'></i>
-                            <div class="text">
-                                <p>Alpine Cargo — it's really easy to use for everyone.</p>
-                                <h6>Saira Goodman</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="heading circle-border aspect-square flex flex-col space-y-3 justify-center items-center" style="--width: 60%">
-                        <h2 class="w-[530px] text-[3.5rem] font-bold leading-tight">What <span class="text-blue">our clients</span> say <span class="text-blue">about us</span></h2>
-                        <p class="w-3/5">We have over 3,000 satisfied customers worldwide, and they are happy to give feedback on our work.</p>
-                    </div>
+            <section id="reviews" class="w-full flex flex-col justify-center items-center text-center my-20 scroll-mt-20"> 
+                <div class="heading w-full flex flex-col space-y-3 items-center">
+                    <h2 class="~/md:~text-[2.25rem]/[3.5rem] font-bold leading-tight">What <span class="text-blue">our clients</span> say <span class="text-blue">about us</span></h2>
+                    <p class="w-4/5 md:w-3/5 xl:w-2/5 ~/md:~text-[0.75rem]/[1rem]">We have over 3,000 satisfied customers worldwide, and they are happy to give feedback on our work.</p>
                 </div>
-                <div id="comments-mobile" class="w-full flex 3xl:hidden flex-col justify-center items-center">
-                    <div class="heading w-full flex flex-col space-y-3 items-center">
-                        <h2 class="w-[530px] text-[3.5rem] font-bold leading-tight">What <span class="text-blue">our clients</span> say <span class="text-blue">about us</span></h2>
-                        <p class="w-1/3">We have over 3,000 satisfied customers worldwide, and they are happy togive feedback on our work.</p>
+                <!-- Test purposes only -->
+                <div id="slider" class="w-full md:w-[90%] flex flex-nowrap gap-4 mt-10 pb-5">
+                    <div class="review">
+                        <i class='bx bxs-quote-alt-left'></i>
+                        <img src="/build/img/reviews/adem.jpg" alt="adem">
+                        <p>I love that with Alpine Cargo there is a way to make it very easy-go for it and create our routes.</p>
+                        <h6>Adem Barnes</h6>
+                    </div>
+                    <div class="review">
+                        <i class='bx bxs-quote-alt-left'></i>
+                        <img src="/build/img/reviews/adem.jpg" alt="adem">
+                        <p>I love that with Alpine Cargo there is a way to make it very easy-go for it and create our routes.</p>
+                        <h6>Adem Barnes</h6>
+                    </div>
+                    <div class="review">
+                        <i class='bx bxs-quote-alt-left'></i>
+                        <img src="/build/img/reviews/adem.jpg" alt="adem">
+                        <p>I love that with Alpine Cargo there is a way to make it very easy-go for it and create our routes.</p>
+                        <h6>Adem Barnes</h6>
+                    </div>
+                    <div class="review">
+                        <i class='bx bxs-quote-alt-left'></i>
+                        <img src="/build/img/reviews/adem.jpg" alt="adem">
+                        <p>I love that with Alpine Cargo there is a way to make it very easy-go for it and create our routes.</p>
+                        <h6>Adem Barnes</h6>
+                    </div>
+                    <div class="review">
+                        <i class='bx bxs-quote-alt-left'></i>
+                        <img src="/build/img/reviews/adem.jpg" alt="adem">
+                        <p>I love that with Alpine Cargo there is a way to make it very easy-go for it and create our routes.</p>
+                        <h6>Adem Barnes</h6>
                     </div>
                 </div>
             </section>
         </main>
-        <footer class="flex flex-col space-y-20 items-center bg-[#487898] text-white rounded-t-[3rem] ~lg:~px-14/28 pt-8 pb-5">
+        <footer class="flex flex-col space-y-20 items-center bg-[#487898] text-white ~/md:~rounded-t-[1rem]/[3rem] ~lg:~px-14/28 pt-8 pb-5">
             <div id="first-row" class="w-full flex flex-col md:flex-row space-y-10 md:space-y-0 justify-between items-center md:items-start">
                 <div id="social-media" class="flex flex-col space-y-3 md:space-y-6 items-center md:items-start">
                     <a href="index.html" class="flex space-x-2 items-center">

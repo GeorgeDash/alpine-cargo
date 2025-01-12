@@ -161,42 +161,26 @@ header, main, section, footer{
 
 
 /* Reviews section */
-.comment{
-    @apply w-fit z-20 absolute;
+.review{
+    @apply w-[300px] flex flex-col items-center space-y-4 bg-gray rounded-xl p-4;
 }
 
-.comment img{
-    @apply size-24 rounded-3xl mb-2.5;
+.review i{
+    @apply w-full text-[2rem] text-left;
 }
 
-.bubble{
-    @apply w-80 bg-gray text-left rounded-3xl shadow-[0px_0px_5px_5px_rgba(0,_0,_0,_0.1)] p-8 relative;
+.review img{
+    @apply w-1/2 rounded-full;
 }
 
-.arrow{
-    width: 3rem;
-    aspect-ratio: 1 / 1;
-    background-color: #f2f4fa;
-     clip-path: 
-     polygon(50% 50%, 0 100%, 100% 100%);
-    position: absolute;
-}
-
-.bubble i{
-    @apply text-[1.9rem];
-}
-
-.bubble .text{
-    @apply flex flex-col space-y-0.5;
-}
-
-.bubble .text p{
+.review p{
     @apply font-medium;
 }
 
-.bubble .text h6{
+.review h6{
     @apply font-bold;
 }
+
 
 /* Social media icons */
 .icon{
