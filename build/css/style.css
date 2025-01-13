@@ -554,6 +554,64 @@ video {
   display: none;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 20rem) {
+  .container {
+    max-width: 20rem;
+  }
+}
+
+@media (min-width: 23.4375rem) {
+  .container {
+    max-width: 23.4375rem;
+  }
+}
+
+@media (min-width: 26.5625rem) {
+  .container {
+    max-width: 26.5625rem;
+  }
+}
+
+@media (min-width: 36rem) {
+  .container {
+    max-width: 36rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .container {
+    max-width: 48rem;
+  }
+}
+
+@media (min-width: 62rem) {
+  .container {
+    max-width: 62rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .container {
+    max-width: 64rem;
+  }
+}
+
+@media (min-width: 75rem) {
+  .container {
+    max-width: 75rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .container {
+    max-width: 90rem;
+  }
+}
+
 .fixed {
   position: fixed;
 }
@@ -579,16 +637,20 @@ video {
   margin-bottom: 11rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .mt-20 {
   margin-top: 5rem;
 }
 
 .mt-28 {
   margin-top: 7rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-40 {
+  margin-top: 10rem;
 }
 
 .flex {
@@ -746,10 +808,6 @@ video {
 
 .overflow-x-hidden {
   overflow-x: hidden;
-}
-
-.overflow-x-scroll {
-  overflow-x: scroll;
 }
 
 .scroll-smooth {
@@ -1497,13 +1555,13 @@ header, main, section, footer {
     width: 60%;
   }
 
-  .md\:w-\[90\%\] {
-    width: 90%;
-  }
-
   .md\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
+  }
+
+  .md\:w-\[90\%\] {
+    width: 90%;
   }
 
   .md\:-translate-x-1\/2 {

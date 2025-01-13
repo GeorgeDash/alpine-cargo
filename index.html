@@ -3,21 +3,33 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        
         <!-- Font and icons -->
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <!-- Font and icons -->
-
+        
         <!-- Always load page on top -->
         <script src="/build/js/alwaysOnTop.js" defer></script>
         <!-- Always load page on top -->
-
+        
         <!-- AOS (Animate on Scroll) -->
         <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
         <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        
+        <!-- SwiperJS CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <!-- SwiperJS CSS -->
+        
+        <!-- SwiperJS JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- SwiperJS JavaScript -->
+        
+        <!-- Slider script -->
+        <script src="/build/js/slider.js"></script>
+        <!-- Slider script -->
 
         <link rel="stylesheet" href="build/css/style.css">
         <link rel="shortcut icon" href="/build/favicon.ico" type="image/x-icon">
@@ -164,38 +176,29 @@
                     <h2 class="~/md:~text-[2.25rem]/[3.5rem] font-bold leading-tight">What <span class="text-blue">our clients</span> say <span class="text-blue">about us</span></h2>
                     <p class="w-4/5 md:w-3/5 xl:w-2/5 ~/md:~text-[0.75rem]/[1rem]">We have over 3,000 satisfied customers worldwide, and they are happy to give feedback on our work.</p>
                 </div>
-                <!-- Test purposes only -->
-                <div id="slider" class="w-full md:w-[90%] flex flex-nowrap gap-4 mt-10 pb-5">
-                    <div class="review">
-                        <i class='bx bxs-quote-alt-left'></i>
-                        <img src="/build/img/reviews/adem.jpg" alt="adem">
-                        <p>I love that with Alpine Cargo there is a way to make it very easy-go for it and create our routes.</p>
-                        <h6>Adem Barnes</h6>
-                    </div>
-                    <div class="review">
-                        <i class='bx bxs-quote-alt-left'></i>
-                        <img src="/build/img/reviews/adem.jpg" alt="adem">
-                        <p>I love that with Alpine Cargo there is a way to make it very easy-go for it and create our routes.</p>
-                        <h6>Adem Barnes</h6>
-                    </div>
-                    <div class="review">
-                        <i class='bx bxs-quote-alt-left'></i>
-                        <img src="/build/img/reviews/adem.jpg" alt="adem">
-                        <p>I love that with Alpine Cargo there is a way to make it very easy-go for it and create our routes.</p>
-                        <h6>Adem Barnes</h6>
-                    </div>
-                    <div class="review">
-                        <i class='bx bxs-quote-alt-left'></i>
-                        <img src="/build/img/reviews/adem.jpg" alt="adem">
-                        <p>I love that with Alpine Cargo there is a way to make it very easy-go for it and create our routes.</p>
-                        <h6>Adem Barnes</h6>
-                    </div>
-                    <div class="review">
-                        <i class='bx bxs-quote-alt-left'></i>
-                        <img src="/build/img/reviews/adem.jpg" alt="adem">
-                        <p>I love that with Alpine Cargo there is a way to make it very easy-go for it and create our routes.</p>
-                        <h6>Adem Barnes</h6>
-                    </div>
+                <!-- Slider main container -->
+                <div class="swiper">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 3</div>
+                  </div>
+                  <!-- If we need pagination -->
+                  <div class="swiper-pagination"></div>
+                
+                  <!-- If we need navigation buttons -->
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                
+                  <!-- If we need scrollbar -->
+                  <div class="swiper-scrollbar"></div>
                 </div>
             </section>
         </main>
@@ -240,4 +243,5 @@
         AOS.init();
     </script>
     <!-- Init AOS -->
+
 </html>
