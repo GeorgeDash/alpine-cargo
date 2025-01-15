@@ -645,14 +645,6 @@ video {
   margin-top: 7rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mt-40 {
-  margin-top: 10rem;
-}
-
 .flex {
   display: flex;
 }
@@ -718,10 +710,6 @@ video {
 
 .flex-col {
   flex-direction: column;
-}
-
-.flex-nowrap {
-  flex-wrap: nowrap;
 }
 
 .items-center {
@@ -1558,10 +1546,6 @@ header, main, section, footer {
   .md\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
-  }
-
-  .md\:w-\[90\%\] {
-    width: 90%;
   }
 
   .md\:-translate-x-1\/2 {
