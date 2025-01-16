@@ -14,7 +14,6 @@
     @apply bg-[#c0c0c0] text-white;
 }
 
-
 /* Additional styles */
 button{
     @apply w-fit;
@@ -24,6 +23,7 @@ header, main, section, footer{
     @apply w-full;
 }
 
+/* ------------------------- */
 
 /* App description */
 .benefit{
@@ -73,7 +73,7 @@ header, main, section, footer{
 
 /* How it works */
 .step{
-    @apply w-full flex flex-row md:flex-col space-x-2 md:space-x-0 text-left border-2 border-gray rounded-xl transition-all duration-375 hover:bg-gray cursor-pointer pl-3 pr-5 pt-4 pb-3;
+    @apply w-full flex flex-row md:flex-col space-x-2 md:space-x-0 text-left border-2 border-gray rounded-xl transition-all duration-375 hover:bg-gray pl-3 pr-5 pt-4 pb-3;
 }
 
 .step h6{
@@ -109,76 +109,40 @@ header, main, section, footer{
 }
 
 
-/* Inner and outer borders */
-.circle-border {
-    --gradient: conic-gradient(
-        from 315deg,
-        #f9faff,
-        #d7e1f9,
-        #f9faff
-    );
-    --border-width: 8px;
-    --width: 45%;
-
-    width: var(--width);
-    aspect-ratio: 1 / 1; /* Ensures the element maintains a 1:1 aspect ratio */
-    border: var(--border-width) solid transparent;
-    border-radius: 100%;
-
-    /*
-    For Safari >= 18.2:
-    Uses the `background` shorthand with the new `border-area` value for `background-clip`.
-    `border-box` is necessary for `background-origin` in early implementations,
-    but an update to the spec hints that it can be dropped in the future.
-    */
-    @supports (background-clip: border-area) {
-        background: var(--gradient) border-box border-area;
-    }
-
-    /*
-    For Chromium, Firefox and Safari <= 18.1:
-    Uses a pseudo element with two overlapping mask images,
-    one covering the border box and the other the padding box.
-    The overlap defines the cut-out area.
-    */
-    @supports not (background-clip: border-area) {
-        position: relative;
-
-        &::before {
-            content: "";
-            position: absolute;
-            inset: calc(-1 * var(--border-width));
-            border: inherit;
-            border-radius: inherit;
-            background: var(--gradient) border-box;
-            mask:
-                conic-gradient(#000 0 0) padding-box exclude,
-                conic-gradient(#000 0 0);
-            pointer-events: none;
-        }
-    }
-}
-
-
 /* Reviews section */
+
+#reviews-scroller{
+    --spacer: 1.5rem;
+
+    @apply w-full grid grid-flow-col sm:max-sm-l:auto-cols-[100%] ~sm-l/xl:~auto-cols-[14rem]/[25rem] gap-[var(--spacer)] overflow-x-scroll overscroll-x-contain mt-10;
+
+    padding: 0 var(--spacer) var(--spacer);
+}
+
 .review{
-    @apply w-[300px] flex flex-col items-center space-y-4 bg-gray rounded-xl p-4;
-}
+    @apply flex flex-col items-center gap-[var(--spacer)] bg-gray rounded-2xl shadow-xl p-[var(--spacer)];
 
-.review i{
-    @apply w-full text-[2rem] text-left;
-}
+    /* ------------------- */
 
-.review img{
-    @apply w-1/2 rounded-full;
-}
+    i{
+        @apply w-full flex justify-start text-[1.5rem];
+    }
 
-.review p{
-    @apply font-medium;
-}
+    img{
+        @apply w-2/5 rounded-full;
+    }
 
-.review h6{
-    @apply font-bold;
+    .comment{
+        @apply w-full flex flex-col items-center space-y-2;
+    }
+
+    .comment h6{
+        @apply font-semibold;
+    }
+}
+  
+.snaps-inline{
+    @apply snap-x snap-mandatory scroll-p-[var(--spacer),_1rem] sm:child:snap-center sm-xl:child:snap-start;
 }
 
 
