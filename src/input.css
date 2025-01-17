@@ -114,7 +114,7 @@ header, main, section, footer{
 #reviews-scroller{
     --spacer: 1.5rem;
 
-    @apply w-full grid grid-flow-col sm:max-sm-l:auto-cols-[100%] ~sm-l/xl:~auto-cols-[14rem]/[25rem] gap-[var(--spacer)] overflow-x-scroll overscroll-x-contain mt-10;
+    @apply w-full grid grid-flow-col sm:max-sm-xl:auto-cols-[100%] ~sm-xl/xl:~auto-cols-[14rem]/[25rem] gap-[var(--spacer)] overflow-x-scroll overscroll-x-contain mt-10;
 
     padding: 0 var(--spacer) var(--spacer);
 }

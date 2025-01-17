@@ -587,6 +587,14 @@ video {
   margin-top: 7rem;
 }
 
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -644,6 +652,10 @@ video {
 
 .scroll-mt-28 {
   scroll-margin-top: 7rem;
+}
+
+.scroll-mt-10 {
+  scroll-margin-top: 2.5rem;
 }
 
 .grid-cols-1 {
@@ -734,6 +746,12 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+
+.space-x-20 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(5rem * var(--tw-space-x-reverse));
+  margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-x-hidden {
@@ -1236,11 +1254,11 @@ header, main, section, footer {
   gap: var(--spacer);
   overflow-x: scroll;
   overscroll-behavior-x: contain;
-  grid-auto-columns: clamp(14rem,6.1953rem + 29.3823vw,25rem)/* fluid from 14rem at 26.5625rem to 25rem at 64rem */;
+  grid-auto-columns: clamp(14rem,-0.14rem + 39.29vw,25rem)/* fluid from 14rem at 36rem to 25rem at 64rem */;
 }
 
 @media (min-width: 20rem) {
-  @media not all and (min-width: 26.5625rem) {
+  @media not all and (min-width: 36rem) {
     #reviews-scroller {
       grid-auto-columns: 100%;
     }
@@ -1493,6 +1511,10 @@ header, main, section, footer {
     width: fit-content;
   }
 
+  .md\:w-4\/5 {
+    width: 80%;
+  }
+
   .md\:-translate-x-1\/2 {
     --tw-translate-x: -50%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1586,11 +1608,5 @@ header, main, section, footer {
 
   .xl\:text-left {
     text-align: left;
-  }
-}
-
-@media (min-width: 90rem) {
-  .\33xl\:overflow-x-clip {
-    overflow-x: clip;
   }
 }

@@ -40,34 +40,34 @@
                 <button class="get-now bg-blue text-white transition-colors duration-375 hover:bg-white hover:text-blue">Get it Now</button>
             </div>
         </header>
-        <main class="mt-28 3xl:overflow-x-clip">
+        <main class="mt-28">
             <section id="about-us" class="scroll-mt-28">
-                <div id="hero" class="flex flex-col space-y-20 md:flex-row items-center md:items-start mb-11">
-                    <div class="description w-full md:w-1/2 flex flex-col justify-start items-center md:items-start space-y-8 text-center md:text-left">
+                <div id="hero" class="flex flex-col space-y-20 md:space-y-0 md:flex-row items-center md:items-start mb-11">
+                    <div class="description w-full md:w-1/2 flex flex-col justify-start items-center md:items-start space-y-8 text-center md:text-left" data-aos="fade-right" data-aos-duration="800">
                         <h1 class="w-full md:w-fit ~text-[1.75rem]/[3.5rem] font-bold leading-tight">Increase your delivery success with <span class="text-blue">Alpine Cargo</span></h1>
                         <p class="w-2/3 ~text-[0.85rem]/[1.05rem] font-medium">Alpine Cargo allows you to manage your deliveries, get real-time proof of delivery, and automate your entire scheduling process from one solution for your business.</p>
                         <button class="bg-blue text-white font-semibold border-2 border-blue rounded-xl transition-all duration-375 hover:bg-white hover:text-blue px-7 py-2.5">Get it Now</button>
                     </div>
-                    <div class="image flex flex-1 justify-center md:justify-end">
+                    <div class="image flex flex-1 justify-center md:justify-end" data-aos="fade-left" data-aos-duration="800">
                         <img src="/build/img/plane.webp" alt="plane image" loading="lazy" class="w-4/5 -scale-x-100">
                     </div>
                 </div>
                 <div id="benefits" class="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="benefit">
+                    <div class="benefit" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
                         <i class='bx bx-category-alt'></i>
                         <div class="benefit-desc">
                             <h3>All-in-one App</h3>
                             <h4>Alpine Cargo does everything you need for delivery confirmation: captures geotags, takes photos, grabs clients signatures, and scans packages.</h4>
                         </div>
                     </div>
-                    <div class="benefit">
+                    <div class="benefit" data-aos="fade-up" data-aos-duration="700" data-aos-delay="600">
                         <i class='bx bx-happy-beaming'></i>
                         <div class="benefit-desc">
                             <h3>Free to start</h3>
                             <h4>Our delivery confirmation software for Android and iPhone is free, and you can get the app on Google Play or download it from App Store.</h4>
                         </div>
                     </div>
-                    <div class="benefit">
+                    <div class="benefit" data-aos="fade-up" data-aos-duration="700" data-aos-delay="800">
                         <i class='bx bx-file'></i>
                         <div class="benefit-desc">
                             <h3>Digital signature</h3>
@@ -125,8 +125,9 @@
             <section id="how-it-works" class="flex flex-col items-center text-center mt-20 mb-44 scroll-mt-24">
                 <h2 class="~text-[2rem]/[3.5rem] font-bold leading-tight">How <span class="text-blue">Alpine Cargo</span> works</h2>
                 <p class="w-full md:w-1/3 ~text-[0.75rem]/[1rem] pt-3 pb-5">Alpine Cargo answers the urgent demand for a fast and easily delivery system.</p>
+                <div id="steps-anchor" class="w-full"></div>
                 <div id="steps" class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:grid-rows-2 lg:grid-rows-none gap-3">
-                    <div class="step">
+                    <div class="step" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200" data-aos-anchor="#steps-anchor" data-aos-anchor-placement="top-top">
                         <h6>[1]</h6>
                         <img src="/build/img/how-it-works/step1.png" alt="step 1" loading="lazy">
                         <div class="step-desc">
@@ -134,7 +135,7 @@
                             <p>With our import tool, you can easily add your new deliveries and more.</p>
                         </div>
                     </div>
-                    <div class="step">
+                    <div class="step" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400" data-aos-anchor="#steps-anchor" data-aos-anchor-placement="top-top">
                         <h6>[2]</h6>
                         <img src="/build/img/how-it-works/step2.png" alt="step 2" loading="lazy">
                         <div class="step-desc">
@@ -142,7 +143,7 @@
                             <p>With all data imported, our delivery app allocates orders to the drivers.</p>
                         </div>
                     </div>
-                    <div class="step">
+                    <div class="step" data-aos="fade-up" data-aos-duration="700" data-aos-delay="600" data-aos-anchor="#steps-anchor" data-aos-anchor-placement="top-top">
                         <h6>[3]</h6>
                         <img src="/build/img/how-it-works/step3.png" alt="step 3" loading="lazy">
                         <div class="step-desc">
@@ -150,7 +151,7 @@
                             <p>Courier can complete the delivery by capturing the recipient's signature.</p>
                         </div>
                     </div>
-                    <div class="step">
+                    <div class="step" data-aos="fade-up" data-aos-duration="700" data-aos-delay="800" data-aos-anchor="#steps-anchor" data-aos-anchor-placement="top-top">
                         <h6>[4]</h6>
                         <img src="/build/img/how-it-works/step4.png" alt="step 4" loading="lazy">
                         <div class="step-desc">
@@ -166,7 +167,7 @@
                     <p class="w-4/5 md:w-3/5 xl:w-2/5 ~/md:~text-[0.75rem]/[1rem]">We have over 3,000 satisfied customers worldwide, and they are happy to give feedback on our work.</p>
                 </div>
                 <div id="reviews-scroller" class="snaps-inline">
-                    <div class="review">
+                    <div class="review" id="adem">
                         <i class='bx bxs-quote-alt-left'></i>
                         <img src="/build/img/reviews/adem.webp" alt="adem">
                         <div class="comment">
@@ -174,7 +175,7 @@
                             <h6>Adem Barnes</h6>
                         </div>
                     </div>
-                    <div class="review">
+                    <div class="review" id="zaina">
                         <i class='bx bxs-quote-alt-left'></i>
                         <img src="/build/img/reviews/zaina.jpg" alt="zaina">
                         <div class="comment">
@@ -182,7 +183,7 @@
                             <h6>Zaina Riddle</h6>
                         </div>
                     </div>
-                    <div class="review">
+                    <div class="review" id="mya">
                         <i class='bx bxs-quote-alt-left'></i>
                         <img src="/build/img/reviews/mya.jpg" alt="mya">
                         <div class="comment">
@@ -190,7 +191,7 @@
                             <h6>Mya Guzman</h6>
                         </div>
                     </div>
-                    <div class="review">
+                    <div class="review" id="saira">
                         <i class='bx bxs-quote-alt-left'></i>
                         <img src="/build/img/reviews/saira.jpg" alt="saira">
                         <div class="comment">
@@ -198,7 +199,7 @@
                             <h6>Saira Goodman</h6>
                         </div>
                     </div>
-                    <div class="review">
+                    <div class="review" id="roosevelt">
                         <i class='bx bxs-quote-alt-left'></i>
                         <img src="/build/img/reviews/roosevelt.jpg" alt="roosevelt">
                         <div class="comment">
@@ -206,7 +207,7 @@
                             <h6>Roosevelt Chase</h6>
                         </div>
                     </div>
-                    <div class="review">
+                    <div class="review" id="emily">
                         <i class='bx bxs-quote-alt-left'></i>
                         <img src="/build/img/reviews/emily.jpg" alt="emily">
                         <div class="comment">
@@ -214,7 +215,7 @@
                             <h6>Emily Carter</h6>
                         </div>
                     </div>
-                    <div class="review">
+                    <div class="review" id="daniel">
                         <i class='bx bxs-quote-alt-left'></i>
                         <img src="/build/img/reviews/daniel.jpg" alt="daniel">
                         <div class="comment">
@@ -263,7 +264,9 @@
 
     <!-- Init AOS -->
     <script>
-        AOS.init();
+        AOS.init({
+            disable: 'mobile'
+        });
     </script>
     <!-- Init AOS -->
 
